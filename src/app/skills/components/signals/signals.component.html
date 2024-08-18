@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <h3>signals works!</h3>
+  </div>
+
+  <input #term type="search" (keyup)="searchFunc(term.value)">
+  <!-- The Counter : {{counter()}} -->
+  <button class="btn btn-primary" (click)="addCoures()">click</button>
+
+  <ul>
+    <h4>Normal list</h4>
+    @for (item of citiesList; track $index) {
+    <li>{{item.name.en}}</li>
+    }
+
+    <hr>
+
+    <h4>Signales list</h4>
+    @for (item of cititesComputedSignal(); track $index) {
+    <li>{{item.name.en}}</li>
+    }
+
+  </ul>
+
+</div>

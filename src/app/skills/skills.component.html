@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Skills List</h2>
+
+  <ul>
+    @for (skill of skillsList; track $index) {
+    <a [routerLink]="skill.title | lowercase">
+      <li>{{skill.title}} </li>
+    </a>
+    }@empty {
+      Loading Skills ...
+    }
+  </ul>
+</div>
